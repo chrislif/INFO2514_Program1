@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 16, 2021, 1:26:01 PM
+    Author     : cl473375
+*/
+
+.empData {
+    border : 1px solid gray;
+    box-shadow: 5px 5px 5px black;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+.formContent {
+    margin: 15px;
+}
+
+.formInput {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.formSubmit {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+.empTable {
+    
+}
