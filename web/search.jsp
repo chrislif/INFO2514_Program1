@@ -17,10 +17,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="style.css"/>
+        <style>
+            <%@include file="style.css" %>
+        </style>
         <title>Employee Database</title>
     </head>
     <body>
+        <nav>
+            <form action="servlet" class="empData">
+                <input type="hidden" name="action" value="goHome">
+                <div class="formContent">
+                    <div class="formInput">
+                        <input type="submit" value="Home">
+                    </div>
+                </div>
+            </form>
+        </nav>
+        
         <form action="servlet" class="empData">
             <input type="hidden" name="action" value="search">
             <div class="formContent">
@@ -35,16 +48,17 @@
         <form action="servlet" class="empData">
             <div class="formContent">
                 <table class="empTable">
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Hire Date</th>
+                    </tr>
                     <% 
                     if (empList != null) {
                         for (Person p : empList) {
                             %>
-                            <tr>
-                                <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Hire Date</th>
-                            </tr>
+                            
                             <tr>
                                 <td>
                                 <% out.print(p.getEmployeeID()); %>

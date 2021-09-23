@@ -29,7 +29,7 @@ public class EmployeeManagerDA {
         
         all.add(new Person("Paul", "Muad'Dib", "Atreides", 2000,
                            LocalDate.of(1965, Month.APRIL, 4), LocalDate.of(1984, Month.MAY, 5)));
-        
+        //Nice Dune Reference
         all.add(new Person("Marty", "", "McFly", 1985,
                            LocalDate.of(1968, Month.JUNE, 12), LocalDate.of(1885, Month.JANUARY, 1)));
         
@@ -42,7 +42,7 @@ public class EmployeeManagerDA {
         all.add(new Person("Christopher", "A", "Lif", 184673,
                            LocalDate.of(1995, Month.MAY, 12), LocalDate.of(2021, Month.APRIL, 28)));
         
-        all.add(new Person("Mallory", "J", "Paul", 1337,
+        all.add(new Person("Mallory", "J", "Paul", 12345,
                            LocalDate.of(1994, Month.DECEMBER, 15), LocalDate.of(2019, Month.FEBRUARY, 16)));
         
         return all;

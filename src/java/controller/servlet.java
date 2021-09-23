@@ -6,7 +6,6 @@
 package controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,17 +39,20 @@ public class servlet extends HttpServlet {
         String url = "/search.jsp";
         String action = request.getParameter("action");
 
-        ArrayList<Person> empList = EmployeeManagerDA.getAllEmployees();
-        request.setAttribute("empList", empList);
-        
+
         if (action == null) {
-            url = "/search.jsp";
+            url = "/";
         }
         else if (action.equals("search")){
-            
+            ArrayList<Person> empList = EmployeeManagerDA.getAllEmployees();
+            request.setAttribute("empList", empList);
+            url = "/search.jsp";
+        }
+        else if (action.equals("goSearch")){
+            url = "/search.jsp";
         }
         else {
-            url = "/search.jsp";
+            url = "/";
         }
         
         getServletContext()
