@@ -21,7 +21,7 @@ import java.util.ArrayList;
  *
  * @author cl473375
  */
-@WebServlet(name = "servlet", urlPatterns = {"/servlet"})
+@WebServlet(name = "servlet", urlPatterns = {"/"})
 public class servlet extends HttpServlet {
 
     /**
@@ -37,20 +37,20 @@ public class servlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         
-        String url = "/";
+        String url = "/search.jsp";
         String action = request.getParameter("action");
 
         ArrayList<Person> empList = EmployeeManagerDA.getAllEmployees();
         request.setAttribute("empList", empList);
         
         if (action == null) {
-            url = "/";
+            url = "/search.jsp";
         }
         else if (action.equals("search")){
             
         }
         else {
-            url = "/";
+            url = "/search.jsp";
         }
         
         getServletContext()

@@ -38,13 +38,27 @@
                     <% 
                     if (empList != null) {
                         for (Person p : empList) {
-                            String firstName = p.getFirstName();
                             %>
-                            <th>
-                                <tr>
-                                    ${firstName}
-                                </tr>
-                            </th>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Hire Date</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                <% out.print(p.getEmployeeID()); %>
+                                </td>
+                                <td>
+                                <% out.print(p.getFirstName()); %>
+                                </td>
+                                <td>
+                                <% out.print(p.getLastName()); %>
+                                </td>
+                                <td>
+                                <% out.print(p.getHireDate()); %>
+                                </td>
+                            </tr>
                             <%
                         }
                     }
