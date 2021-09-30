@@ -3,12 +3,10 @@
     Created on : Jan 24, 2018, 9:42:52 AM
     Author     : fssco
 --%>
-
 <%@page import="java.time.LocalDate"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="business.Person"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <%
     ArrayList<Person> empList = (ArrayList<Person>) request.getAttribute("empList");
 %>
@@ -33,7 +31,6 @@
                 </div>
             </form>
         </nav>
-        
         <form action="servlet" class="empData">
             <input type="hidden" name="action" value="search">
             <div class="formContent">
@@ -53,7 +50,6 @@
                 </div>
             </div>
         </form>
-            
         <form action="servlet" class="empData">
             <div class="formContent">
                 <table class="empTable">
@@ -115,7 +111,7 @@
                                 }
                             }
                             else {
-                                %>
+                            %>
                                 <tr>
                                     <td>
                                     <% out.print(p.getEmployeeID()); %>
@@ -130,7 +126,7 @@
                                     <% out.print(p.getHireDate()); %>
                                     </td>
                                 </tr>
-                                <%
+                            <%
                             }
                         }
                     }

@@ -1,5 +1,6 @@
 .empData {
     border : 1px solid gray;
+    border-radius: 5px;
     box-shadow: 5px 5px 5px black;
     max-width: 500px;
     margin-left: auto;
@@ -26,6 +27,7 @@
 .empTable {
     width: 100%;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 .empTable td {
@@ -35,4 +37,3 @@
 .empTable th {
     border-bottom: 2px solid black;
 }
-
