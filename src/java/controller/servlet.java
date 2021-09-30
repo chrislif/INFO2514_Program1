@@ -46,6 +46,7 @@ public class servlet extends HttpServlet {
         else if (action.equals("search")){
             ArrayList<Person> empList = EmployeeManagerDA.getAllEmployees();
             request.setAttribute("empList", empList);
+            
             url = "/search.jsp";
         }
         else if (action.equals("goSearch")){
